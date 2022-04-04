@@ -143,7 +143,7 @@ class Encoder4Editing(Module):
         self.body = Sequential(*modules)
 
         self.styles = nn.ModuleList()
-        log_size = int(math.log(opts.stylegan_size, 2))
+        log_size = int(math.log(1024, 2))
         self.style_count = 2 * log_size - 2
         self.coarse_ind = 3
         self.middle_ind = 7
